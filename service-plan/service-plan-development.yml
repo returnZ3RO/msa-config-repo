@@ -1,6 +1,9 @@
 #
 # development configuration
 #
+mybatis:
+   config-location: classpath:mybatis/configuration.xml
+   
 spring:
    devtools:
       livereload:
@@ -10,8 +13,7 @@ spring:
       url: jdbc:mysql://34.64.148.106:3307/return0?characterEncoding=utf8
       username: return0
       password: 1234
-mybatis:
-   config-location: classpath:mybatis/configuration.xml
+
 eureka:
    instance:
       preferIpAddress: true
