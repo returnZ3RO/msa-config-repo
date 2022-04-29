@@ -1,0 +1,38 @@
+#
+# production configuration
+#
+mybatis:
+   config-location: classpath:mybatis/configuration.xml
+
+spring:
+   datasource:
+      driver-class-name: org.mariadb.jdbc.Driver
+      url: jdbc:mysql://34.64.148.106:3307/return0?characterEncoding=utf8
+      username: return0
+      password: 1234
+
+eureka:
+   instance:
+      preferIpAddress: true
+   client:
+      fetchRegistry: true
+      registerWithEureka: true
+      serviceUrl:
+         defaultZone: http://34.64.148.106:8761/eureka
+logging:
+   pattern:
+      file: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n"
+   logback:
+      rollingpolicy:
+         file-name-pattern: "logs/${spring.application.name}.%d{yyyy-MM-dd}.%i.log.zip"
+         max-file-size: 10MB
+         max-history: 10
+   file:
+      name: logs/${spring.application.name}.log
+   level:
+      root: WARN
+      com:
+         example:
+            service:
+               plan:
+                  exception: ERROR
