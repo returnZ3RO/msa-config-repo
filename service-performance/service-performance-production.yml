@@ -34,5 +34,5 @@ logging:
       com:
          example:
             service:
-               plan:
+               performance:
                   exception: ERROR
