@@ -19,20 +19,3 @@ eureka:
       registerWithEureka: true
       serviceUrl:
          defaultZone: http://34.64.240.101:8761/eureka
-logging:
-   pattern:
-      file: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n"
-   logback:
-      rollingpolicy:
-         file-name-pattern: "logs/${spring.application.name}.%d{yyyy-MM-dd}.%i.log.zip"
-         max-file-size: 10MB
-         max-history: 10
-   file:
-      name: logs/${spring.application.name}.log
-   level:
-      root: WARN
-      com:
-         example:
-            service:
-               performance:
-                  exception: ERROR
