@@ -1,0 +1,27 @@
+#
+# development configuration
+#
+spring:
+   devtools:
+      livereload:
+         enabled: true
+   datasource:
+      driver-class-name: org.mariadb.jdbc.Driver
+      url: jdbc:mysql://34.64.148.106:3307/return0?characterEncoding=utf8
+      username: return0
+      password: 1234
+mybatis:
+   config-location: classpath:mybatis/configuration.xml
+eureka:
+   instance:
+      preferIpAddress: true
+   client:
+      fetchRegistry: true
+      registerWithEureka: true
+      serviceUrl:
+         defaultZone: http://localhost:8761/eureka
+logging:
+   pattern:
+      console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n"
+   level:
+      root: INFO   
