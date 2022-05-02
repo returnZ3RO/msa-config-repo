@@ -67,7 +67,6 @@ zuul:
    ignored-services: '*'
    prefix: ''
    routes:
-      service-emaillist: /emaillist/**
-      service-guestbook: /guestbook/**
-      service-gallery: /gallery/**
-      service-storage: /storage/**
+      service-plan: /plan/**
+      service-performance: /performance/**
+      service-user: /user/**
